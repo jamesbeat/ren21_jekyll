@@ -1,6 +1,13 @@
 /**
  * Reset some basic elements
  */
+ 
+*{
+	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+ 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -212,14 +219,48 @@ pre {
 	float: right;	
 	width: 75%;
 	height: auto;
-	margin-right: -240px;
+	margin-right: -200px;
 	margin-left: 30px;
 	margin-top: 10px;
 	margin-bottom: 40px;
 	
+	@include media-query($on-laptop) {
+		margin-right: -120px;
+	}
+	@include media-query($on-palm) {
+		margin-right: 0px;
+	}
+	
 	img{
 		display: block;
 	}
+}
+
+.infobox{
+
+	float: right;	
+	width: 75%;
+	
+	font-size: 0.9em;
+	line-height: 1.4em;
+	
+	background: $grey-color-light;
+	
+	height: auto;
+	margin-right: -200px;
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	
+	padding: 20px;
+	
+	@include media-query($on-laptop) {
+		margin-right: -120px;
+	}
+	@include media-query($on-palm) {
+		margin-right: 0px;
+	}
+
 }
 
 .footnotes{
