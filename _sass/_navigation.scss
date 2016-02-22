@@ -112,32 +112,50 @@ a:hover.anchor {
 
 .anchorific {
 	position: fixed;
-	margin-left: -30px;
+	
 }
 
 .anchorific ul {
 	list-style-type: none;
-	
+	margin: 0 ;
+	padding: 0;
 }
 
-.anchorific li ul {
-	list-style-type: none;
-	display: none;
-}
 
 .anchorific ul li a {
 	display: block;
 	text-decoration: none;
 	padding: 5px;
+	
+	text-overflow: ellipsis;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: bottom;
 }
 
 .anchorific li ul {
-	display: none;
+	list-style-type: none;
+	//display: none;
+	margin: 0 ;
+	padding: 0;
+	font-size: 0.85em;
+	
+	li a{
+		padding: 2px 5px;
+		border-right: transparent 4px solid; 
+	}
+	
+	li.active a {
+		color: lighten($brand-color, 25%);
+		border-right: lighten($brand-color, 25%) 4px solid; 
+	}
+	
 }
 
 .anchorific li.active > a {
-	/* border-right: #e54339 1px solid; */
-	background-color: #fff;
+	border-right: $brand-color 4px solid; 
+	
 }
 
 .anchorific li.active > ul {
