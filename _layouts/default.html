@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+        <aside id="sidebar-first" class="sidebar">
+	        
+	        {% include datamenu menu=site.data.menu all=false %}
+	      	 
+	      	<nav class='anchorific'></nav>       
+	      	<a href="#top" class="top">Scroll to top</a>        
+        </aside>
+        
+		<div id="main" class="content">
+       		{{ content }}
+		</div>
+		
+		<aside id="sidebar-second" class="sidebar">
+	      	        	        
+	       
+	        
+        </aside>
+     
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
